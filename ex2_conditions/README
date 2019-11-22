@@ -1,0 +1,55 @@
+hadar933
+208287599
+Hadar Sharvit
+
+I discussed the exercise with: no one.
+
+=============================
+=  README for ex2:  =
+=============================
+
+
+==================
+=  Description:  =
+==================
+1.far_to_cel:
+    converts fahrenheit to celsius
+2.calculate mathematical expression:
+    a function that applies a given mathematical
+    operation on two given numbers (not from user input)
+3.calculate from string:
+    a function that applies a given mathematical
+    operation on two given numbers (from user input)
+4.largest and smallest:
+    without using max or min functions, decides which number
+    is the biggest and which is the smallest among three
+5.quadratic equation:
+    solved the quadratic equation (not by user input)
+6.quadratic equation:
+    solved the quadratic equation (with user input)
+7.shapes:
+    calculates various shapes by getting information
+    from the user.
+8.stable_price:
+    checks if a certain threshold is bigger or smaller
+    than three given numbers
+9.test largest and smallest:
+    runs a test on function largest and smallest
+    with 5 types of function inputs.
+
+======================
+=  Special Comments  =
+======================
+numbers chosen for question 9:
+(-1, -2, -3) - tests if 3 negative numbers weren't causing
+    errors.
+(0, 0, 0) - checking 0 properties and also same number properties.
+    wanted to make sure even though numbers are equal, an output
+    will still go out.
+(0.5, -1.7, 0) - different kinds of numbers. floats(positive or negative)
+    and zero. (a somewhat combination of the previous two conditions)
+(1/2, 1/4, 1/5) - wanted to check if a number can be represented as
+    an operation between two numbers.
+(-1/2, -2/4, -1/5) - was making sure negative operations will be shown
+    as should be when comparing size (the smaller the fraction, the
+    bigger the number)
