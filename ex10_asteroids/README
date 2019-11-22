@@ -1,0 +1,72 @@
+hadar933
+208287599
+Hadar Sharvit
+
+=============================
+=  README for ex10:  =
+=============================
+
+ASTEROIDS
+
+==================
+=  Description:  =
+==================
+the program is made out of 5 files:
+
+asteroids_main: the main operator of the program.
+consists of a class called GameRunner with all the needed methods:
+1.init - generator for the game
+2.objects mover - moves all objects of the game
+3.ship operations - sets direction and acceleration
+4. asteroids and torpedoes creators - creation, registration etc
+5.life points reduction - reduces life when hit by an asteroid
+6.split asteroids - when hit by torpedo
+7.teleporter - teleportes the ship when T is pressed.
+in addition, there are various helper methods.
+
+ship: consists of a generator and setters/getters methods.
+setters - set the position, velocity and direction
+getters - receives the the position, velocity and direction
+
+torpedo: consists of a generator and setters/getters methods.
+setters - set the position, velocity direction and life
+getters - receives the the position, velocity direction and life
+
+asteroid: consists of a generator and setters/getters methods. also has
+a function which determines collisions.
+setters - set the position, velocity and size
+getters - receives the the position, velocity and size
+
+screen: a helper file that was provided: initializes the shapes controller,
+the screen passed is the screen controlling the game.
+
+
+======================
+=  Special Comments  =
+======================
+Three considerations I had during the creation of the game:
+1. Creating setters and getters - I figured that by creating setters and
+getters for each argument of the generator, I will have easier access
+to the classes data. the overall display of the functions themselves
+might not seem very elegant, but they have saved a lot of unnecessary code.
+Alternatively, I could have call each argument from the generator by
+creating an object (and importing the needed files). This doesnt seems to me
+as a way of writing an ordered code and the creation of objects might cause
+problems and bugs throughout the program.
+2. 1 function that moves all objects - I have decided to create a single
+function that is responsible for movement in general. since each class
+is generating objects according to the same location data (x,y coordinates)
+the process of movement is similar. This method is preferred because it is
+efficient and  prevents code duplication. Obviously, I could have created
+three separate functions that move each object, but this method isn't
+suggested, as ive written above. I will say that if I would have created three
+separate functions in each file, the asteroid_main code would be less dense.
+3. torpedo life as a generator argument - in order to count the number of
+game loops (to delete the torpedo) Ive added an argument to the torpedo
+generator. I then created a simple method in asteroid_main.py that converts
+this data into actual deletion of the torpedo. I have came to this solution
+because firstly, I've tried to create a constant count = 0, and increment it's
+value by one each loop. this have caused problems - when I tried to return
+the value of the count, the game would stop running. this solution may have
+forced me to create another function and add another argument to __init__
+but eventually the game ran fluently.
