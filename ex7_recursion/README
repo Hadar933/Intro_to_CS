@@ -1,0 +1,102 @@
+hadar933
+208287599
+Hadar Sharvit
+
+=============================
+=  README for ex7:  =
+=============================
+
+
+==================
+=  Description:  =
+==================
+print to n - executes the recursive, then printing the result - providing
+print of numbers in ascending order
+
+print_reversed - executes the print, then applying the recursive
+ function - providing print of numbers in descending order
+
+has_divisor_smaller_than(n, i=3) and is prime:
+    checks for prime by using i which might or might not divide n
+
+exp_n_x and factorial:
+ sum of all numbers from 0 to n that are equal to (x^i/i!)
+
+ hanoi_game :  by using two recursive calls, the function solves the play
+ hanoi game
+
+repetitive_sequences and print sequences:
+    creating all possible sequences of  length n from
+    given list of letters,  with repetition.
+
+non_repetitive_sequences and print no repetition sequences
+     creating all possible sequences of  length n from
+     given list of letters,  without repetitions.
+
+parentheses(n):
+    generates all possible couples of parentheses given n options.
+
+list_of_directions(n,k):
+    creates a list of 'r's and 'u's according to the numbers n and k
+
+permute(array):
+    generates all permutations of an array without repetition. takes into
+    account an array that might has repetition of letters
+
+up_and_right(n,k):
+    converts an array of permutations to string of all possible directions
+    according to given numbers n and k. permutations are based on a list
+    of directions as described before.
+
+ flood_fill and flood_fill_helper
+    according to a start position, the function will create a somewhat flood
+    fill, converting dots to asterisks that are in the surrounding ot the dot
+
+======================
+=  Run Time  =
+======================
+1. is prime
+lets go over the function:
+    if n == 2:
+        prime = True # 1 OPERATION
+    elif n <= 1 or n % 2 == 0: # 3 OPERATIONS
+        prime = False
+    elif i * i > n: # 2 OPERATION
+        prime = True
+    elif (n % i) == 0: # # 2 OPERATION
+        prime = False
+    else:
+        prime = has_divisor_smaller_than(n, i+2) # ONE RECURSIVE CALL -
+                                                 # sqrt(n) operations
+    return prime # 1 OPERATION
+    # sqrt(n) in total #
+
+2.print no repetition sequence:
+    if n == 0:
+        return None #1 operation
+    if len(string) == n:
+        print(string) #1 operation
+        return
+    else:
+        temp = string #1 operation
+        for char in char_list: #n operations
+            if char not in string:
+                string = temp + char #1 operation
+                non_repetitive_sequences(char_list, n, string) #n operations
+
+                   # IN TOTAL - n^2
+3.flood_fill
+    if image[row][col] == '*': #2 operations
+        return image
+    if image[row][col] == '.': #2 operations
+        image[row][col] = '*'
+        flood_fill_helper(image,row+1,col) #down
+        flood_fill_helper(image, row - 1, col)  #up
+        flood_fill_helper(image, row , col+1)  # right
+        flood_fill_helper(image, row , col-1)  # left
+
+        # each of the recursive calls goes over a single axis in a different
+        direction from the current position (start) up until the edge of
+        the matrix. this range may vary from 0 to len(row)-1, or from 0
+        to len(col)-1. Considering the worst case scenario- the run time
+        should be 4n (considering n is the said range)
