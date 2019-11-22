@@ -1,0 +1,46 @@
+hadar933
+208287599
+Hadar Sharvit
+
+=============================
+=  README for ex11:  =
+=============================
+ DECISION TREES
+==================
+=  Description:  =
+==================
+Classes and functions description:
+Class Node: class generating node objects.
+
+Class Record: class generating 	class generating record objects:
+-parse_data: reads the file path and returns the data as records
+
+Class Diagnoser: Class that is responsible for diagnosers objects:
+-diagnose: tells what is the plausible illness according to
+		a list of provided symptoms
+-calculate_success_rate: calculates the ratio between the successful
+		diagnoses of the tree to the entire length of the records
+-all_illnesses: returns all the illnesses that are kept in the leafs data
+-all_illnesses_helper:adds the data of all leafs to a list
+		in an unordered fashion.
+-illnesses_sort:converts the list that has been made im all_illnesses_helper
+		to an ordered list that shows each illness once.
+-most_rare_illness: provides the illness that is the rarest
+		among all of the illness
+-paths_to_illness:returns the route that suits
+		the given illness to the node reached.
+-paths_to_illness_helper: performs the recursive runs aiding the main
+        function paths to illness
+
+global functions:
+-build_tree: builds a tree according to the symptoms provided
+-tree_helper:performs the recursive runs, helping the main function
+	build tree
+-sorting_helper:converts the route list to a list representing a
+    route to a leaf
+-illness_lst: converts a list of records to a list of illnesses
+-optimal_tree: 	returns the tree with the highest success rate
+
+======================
+=  Special Comments  =
+======================
