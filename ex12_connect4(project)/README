@@ -1,0 +1,66 @@
+hadar933
+208287599
+Hadar Sharvit
+
+shulik10
+313446320
+Shalom Kachko
+
+
+=============================
+=  README for ex12:  =
+=============================
+CONNECT 4 GAME
+==================
+=  Description:  =
+==================
+The program consists of 4 files, as followed:
+
+1.game.py
+The logic behind the game. has two classes:
+a.Game:
+This class is in charge enforcing the rules of the game during its run.
+    All actions which happen on the board which are related to inserting
+    a disc into the game are monitored by the different methods of the class.
+the main functions of the class Game are:
+-make move - performs the move that was assigned by the player or AI,
+and makes sure the move is valid(diagonally horizontally and vertically).
+-change board - changes the board according to the move
+-get winner - checks the board for any 4 discs representing the winner
+-check full board - checks if the board is full
+*furthermore, the class consists of setters and getters.
+b.Disc:
+The constructor of the Disc class, holds two fields, the color of the
+        disc and its location on the board which is represented by a tuple
+        (x_cor, y_cor).
+the main functions of the class Disc are:
+-get cor - checks the coordinates of a disc
+-get color - checks the color of a disc
+
+2.gui.py:
+consists of one class: GUI
+this class is responsible for the creation of the GUI - the graphics
+    of the game
+the main functions of the class Game are:
+-start screen - opens the main menu containing the game modes buttons
+-redirectors - redirects the user to the wanted game according to his click
+-mboard graphics - creates the graphics of the game
+-pc vs pc - runs the automatic game computer vs computer
+-main game: runs the games depending on the users choice
+-update game - updates the board
+-move towards mouse - creates a disc that follows the mouse, indicating the
+position
+-fall to pos - drops the disc to the wanted position
+winner functions - declares the winner and marks the winning discs
+-exit and play again functions- buttons
+*furthermore, the class consists of setters and getters.
+
+3.ai.py
+consists of __init__ and find legal move functions.
+
+4.four_in_a_row.py
+creates the needed class objects and calls the gui.
+
+======================
+=  Special Comments  =
+======================
