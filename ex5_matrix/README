@@ -1,0 +1,65 @@
+hadar933
+208287599
+Hadar Sharvit
+
+I discussed the exercise with: Lab support.
+
+=============================
+=  README for ex5:  =
+=============================
+FUNCTIONS SPECIFICATION:
+word_file_locator(args):
+    checks if a given file argument(wordlist) exists in the folder
+matrix_file_locator(args):
+    checks if a given file argument(matrix) exists in the folder
+valid_direction(directions):
+    checks if given direction(s) is(are) valid.
+invalid_length(args):
+    checks if the right amount of arguments is given
+check_input_args(args):
+    calls all previous functions to make sure conditions are met
+read_wordlist_file(filename):
+    converts the content of the word file to a workable list
+read_matrix_file(filename):
+     converts the content of the matrix file to a workable list
+direction_:
+    check for words in a given direction. runs over indexes depending on
+    the given direction.
+from_list_of_lists_to_list(list_of_list)
+    converts a list of lists to a single list of items
+list_to_tuple(list):
+    converts a list to a tuple
+find_words_in_matrix(word_list,matrix, directions):
+    calls direction functions to check all given directions
+write_output_file(results,output_filename):
+    creates a new file containing the output of the previous function
+main():
+    calls all previous functions to run the program
+
+CHECK WORDSEARCH
+
+list_to_tuple_checker():
+    checks the function list to tuple
+==================
+=  Description:  =
+==================
+CHECK WORDSEARCH CHECKS:
+1.histogram_tuple[0] == ('dog',2)
+    checks that the values of the list are tuples, and that they are
+    arranged in the needed format - histogram list of the words
+2.histogram_tuple[0][0] == ('dog')
+    checks for the inned value of the tuple. has to be the word itself,
+    and not the number that represents its occurrences.
+3.histogram_tuple[0] != histogram_tuple[3]
+    checks whether uppercase word are classified as different then lowercase
+    ones. the function need to classify those from one another, and adhere
+    different tuples to words with different letter-case
+4.histogram_tuple[0][1] != histogram_tuple[1][1]
+    checks if the number of times a word shows up increments when needed.
+    in here, Ive tried to see if words that show up more then others
+    do get the proper value.
+
+
+======================
+=  Special Comments  =
+======================
