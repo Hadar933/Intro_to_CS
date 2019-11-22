@@ -1,0 +1,66 @@
+hadar933
+Hadar Sharvit
+
+Shalom kachko
+
+I discussed the exercise with: Shalom kachko.
+
+=============================
+=  README for ex6:  =
+=============================
+FUNCTIONS SPECIFICATION:
+
+ask for file functions(edit/merge/melody):
+
+these functions request the name of the file from the user, given the
+choice he picked. (edit merge or create melody)
+
+
+menus:
+
+start menu:
+this functions is the one who is being called, and it calls to all of the
+other functions according to the users choices.
+contains the start menu and the user choice segment
+
+composer menu:
+in charge of composing the given file and going to transition menu
+
+merge menu:
+merges the files and goes to transition menu
+
+edit menu:
+presents all edit options, receives a choice from user and directs to the
+needed function for edit implementation
+
+change file functions:
+manipulates the file according to the edit choice that was chosen.
+mostly changes the amount of items in the list representing the file,
+multiplying its values by some constant and averaging certain values in the
+list.
+
+
+text file reader:
+converts a txt file to a list of its letters
+
+composer:
+creates a melody using a txt file containing the instructions.
+
+gcd:
+find greatest common divider.
+
+merge files:
+merge two given files to a single wav file using averages and gcd.
+distinguishes files that have different frame rate.
+
+transition menu:
+last functions that provides the user with two options: save or change.
+the user choice will declare how this function behaves.
+
+==================
+=  Description:  =
+==================
+
+======================
+=  Special Comments  =
+======================
