@@ -1,0 +1,49 @@
+hadar933
+208287599
+Hadar Sharvit
+
+=============================
+=  README for ex8:  =
+=============================
+
+
+==================
+=  Description:  =
+==================
+PART A  - SUDOKU
+I have solved the sudoku using 5 functions:
+1.find_vacant(board,lst): runs over the given board and searches indexes
+that has zero in them. the index will then be added to a list
+
+2.in_row(board,row,num):
+checks if the number that is given can be inserted in the given row,
+considering the laws of sudoku
+
+in_col(board,col,num):
+checks if the number that is given can be inserted in the given column,
+considering the laws of sudoku
+
+in_zone(board,row,col,num):
+checks if the number that is given can be inserted in the given zone,
+considering the laws of sudoku. The zone is consisted of sqrt(n) x sqrt(n)
+cubes.
+
+safe_location(board,row,col,num):
+this function returns a boolean value whenever all of the 3 previous function
+return that the position is "safe"
+
+solve_sudoku(board):
+this function is responsible for the recursive run, that eventually solves
+the sudoku, using all previously mentioned functions.
+
+PART B
+in this part, all of the functions are similarly made:
+each question is being answered using three seperate functions that each
+has its own unique task. one functions is responsible for the recursive run,
+the other for the manipulation of the return or the print that is needed,
+and the other is responsible for the creation of the list if needed.
+
+
+======================
+=  Special Comments  =
+======================
