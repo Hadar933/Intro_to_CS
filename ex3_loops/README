@@ -1,0 +1,66 @@
+hadar933
+208287599
+Hadar Sharvit
+
+I discussed the exercise with: Metargelim.
+
+=============================
+=  README for ex3:  =
+=============================
+web pages I have used:
+1.https://plot.ly/matplotlib/histograms/
+2.https://www.tutorialspoint.com/python/python_basic_operators.htm
+==================
+=  Description:  =
+==================
+1.input list: multiple user inputs are inserted to a single list
+2.concat list: adds components from string list to a new list
+3.maximum: check for biggest number in a list of numbers (using loop)
+4.cyclic: determines whether a list is a cyclic permutation of
+          another list.
+5.seven boom: switches every number that has 7 in it or is divisible
+          by 7 with the word 'boom'
+6.histogram: with a given list and a number n, the function creates a new
+             list mentioning how many times an int was shown and in which
+             position
+7.prime factors: finding all prime factors of a single number. also shows
+                 how many times the same prime factor is being used.
+8.cartesian: using loop, the function creates the cartesian product of two
+           given lists.
+9.pairs: check if any two given numbers from a list sum up to a certain
+         number n. repeats the process with a loop and making sure no similar
+         results print out.
+10.check maximum: the function checks 4 different inputs on the maximum
+                  function, testing edge cases.(inputs specified in special
+                  comments)
+======================
+=  Special Comments  =
+======================
+check maximum inputs:
+1.[0] - checks if [0] returns 0 and not None as requested in the Targil.
+2.[] - checks if [] returns None and not 0 as requested in the Targil.
+3.[1,1,1] - a situation that was mentioned as an optional possibility in the
+            Targil. checks if a list with identical components returns the
+            component that is being repeated.
+4.[0,0,0] - a combination of check no.1 and no.3. checks that 0 is returned
+            and not None, even for multiple 0's.
+
+Theoretical Questions:
+1.cyclic(123 ,321) - an error will occur because 123 and 321 aren't lists
+                     and they don't have lengths.
+2.maximum([-3, -2, -1]) - wont cause an error, but will print 0 instead
+                          of the correct solution (-1). that's because the
+                          program wasn't meant to deal with negatives.
+3.maximum([1, 10, 100, ‘intro’]) - will return an error because the str 'intro'
+                                 cannot be compared to integers.
+4.histogram(3, [1,2,3,4]) - will return an error because the given list will
+                            create a new list with 4 components. that will
+                            cause a problem with the given number 3.
+5.prime_factors(0) - since 0 is smaller than i*i, the program will print 0
+                     even though it isn't actually a prime. that's because
+                     the code was programed to deal with numbers bigger or
+                     equal to 1
+6.pairs([0,0,1,1,2,2], 2) - since the numbers are shown more than once, the
+                            loop will go over each and everyone of them, thus
+                            returning copies of the same couples.
+
