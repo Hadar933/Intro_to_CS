@@ -1,0 +1,90 @@
+hadar933
+208287599
+Hadar Sharvit
+
+
+=============================
+=  README for ex4:  =
+=============================
+
+==================
+=  Description:  =
+==================
+PART A
+
+1.update word pattern:
+
+Given a letter that is a part of the word, the function will switch the
+'_' string from the pattern with the letter mentioned. By doing so, a new
+pattern will return
+
+2.run single game:
+
+This functions takes care of the entire run of a single hangman game.
+There are three main processes: the initialization, the gameplay and the
+ending. The continuity of the game relies mostly on the user's input and
+according to different inputs a different output will arise in each of the
+processes mentioned.
+
+3. main:
+this functions is in charge of running the game, when the right input is
+provided. Furthermore, the function loads the words file.
+
+PART B
+
+1.filter words list:
+
+the function filters through a list of words, while appending only
+relevant words to a new list 'relevant_words'. the relevant words are
+ones who obey to all previous helping functions(that ive build), that also
+has the same length as the pattern and aren't in the wrong guess list.
+
+2.choose letter:
+
+from a list of words, and according to a pattern formation,
+the functions shows which letter shows up the most. this function also users
+pre-built functions that I have written such as maximum_value(lst) and the
+function that was given in the targil description letter_to_index(letter)
+
+3.updating run single game
+
+calling once again to get input and applying the previously written functions.
+thus enabling a new option of using hints as a part of the game.
+
+PART C
+
+1. check update word pattern:
+
+the function checks the function update word pattern in 4 different
+edge situations. The function will return True only if all 4 situations
+will pass the test and false otherwise.
+
+Section C - q1:
+
+1.update_word_pattern('cooperate','c__p_rat_','o') == 'coop_rat_':
+checks if the functions adds the letter in all missing places and not only
+in one of them
+2.update_word_pattern('pattern','_______','t') == '__tt___':
+checks if for an empty patten and for a word with double t, the letters will
+still append
+3. update_word_pattern('coop'+'erate','c__p_rat_','o') == 'coop_rat_':
+checks if the functions can understand a word that is given as a sum of
+two strings, and if the letter will be added to the pattern.
+4.update_word_pattern('hangman','hangman','a') == 'hangman':
+checks if even for a pattern that is equal to the word, even if a letter is
+given the function will work properly.
+
+ Section C - q2:
+
+ First of all, I would have need to change all the functions that checks
+ for a lowercase english letter. The principle of those functions would've
+ still be the same, yet the ascii numbers (for instance) would be different.
+ Secondly, it would have been preferred that all functions will addresses the
+ Final forms of hebrew letters. That is mainly because when we compare
+ letters in word and pattern, for instance, final form letters are different
+ in value then non-final words but not necessarily in meaning.
+  
+======================
+=  Special Comments  =
+======================
+              
