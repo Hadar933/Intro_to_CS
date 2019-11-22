@@ -1,0 +1,45 @@
+hadar933
+208287599
+Hadar Sharvit
+
+
+=============================
+=  README for ex9:  =
+=============================
+
+
+==================
+=  Description:  =
+==================
+RUSH HOUR GAME
+Classes and functions:
+each class has an __init__ function inside, which is the operator.
+
+1.Class Car
+
+car_coordinates(self): generates the car coordinates
+possible_moves(self): provides the possible move for a car
+movement_requirements(self, movekey): needed index to be empty
+move(self, movekey): moves the car
+get_name(self): returns the color of the car
+
+2.Class Board
+
+__str__(self): prints the board
+cell_list(self): returns all indexes of the board including winning index
+possible_moves(self):returns the legal moves of all cars in this board
+target_location(self): returns the coordinates of the location which is to be
+        filled for victory.
+cell_content(self, coordinate): Checks if the given coordinates are empty.
+add_car(self, car):Adds a car to the game.
+move_car(self, name, movekey):moves car one step in given direction.
+
+3.Class Game
+
+input_receiver(self):checks the user input
+ __single_turn(self):All operations thar are performed in a single turn
+ play(self):The main driver of the Game. Manages the game until completion.
+
+======================
+=  Special Comments  =
+======================
